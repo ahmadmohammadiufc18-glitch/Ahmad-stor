@@ -78,7 +78,7 @@ Deno.serve(async (req) => {
     return reply({ error: "order_items_create_failed" }, 500);
   }
 
-  const callback = siteUrl.replace(/\/$/, "") + "/#payment-result";
+  const callback = url.replace(/\/$/, "") + "/functions/v1/verify-zarinpal-payment";
   let gatewayResponse: Response;
   try {
     gatewayResponse = await fetch("https://payment.zarinpal.com/pg/v4/payment/request.json", {
