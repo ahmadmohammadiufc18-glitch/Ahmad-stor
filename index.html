@@ -272,7 +272,7 @@ const progress=document.getElementById('scrollProgress'),backTop=document.getEle
       btn.setAttribute('aria-pressed',String(active));
       btn.setAttribute('aria-label',active?'حذف از علاقه‌مندی‌ها':'افزودن به علاقه‌مندی‌ها');
       btn.title=active?'حذف از علاقه‌مندی‌ها':'افزودن به علاقه‌مندی‌ها';
-      btn.innerHTML=active?'♥':'♡';
+      const glyph=active?'♥':'♡';if(btn.textContent!==glyph)btn.textContent=glyph;
       card.classList.toggle('favorite-hidden',onlyFavorites&&!active);
     });
     const toolbar=document.querySelector('#app .toolbar');
