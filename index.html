@@ -330,4 +330,25 @@ const progress=document.getElementById('scrollProgress'),backTop=document.getEle
 })();
 </script>
 
+
+<script>
+/* Persist all site-owned data on this browser, including contact submissions.
+   GitHub Pages has no server database; this does not sync data between visitors/devices. */
+(()=> {
+  const CONTACT_KEY='ahmadstore_contacts';
+  const safeRead=(key,fallback=[])=>{try{const v=JSON.parse(localStorage.getItem(key)||'null');return v===null?fallback:v}catch{return fallback}};
+  document.addEventListener('submit',event=>{
+    const form=event.target;
+    if(!(form instanceof HTMLFormElement))return;
+    if(!form.querySelector('[name="subject"]')||!form.querySelector('[name="message"]'))return;
+    const values={};
+    new FormData(form).forEach((value,key)=>values[key]=String(value));
+    if(!values.message||!values.message.trim())return;
+    const entries=safeRead(CONTACT_KEY,[]);
+    entries.push({id:Date.now(),date:new Date().toISOString(),...values});
+    try{localStorage.setItem(CONTACT_KEY,JSON.stringify(entries.slice(-500)))}catch{}
+  },true);
+})();
+</script>
+
 </body></html>
