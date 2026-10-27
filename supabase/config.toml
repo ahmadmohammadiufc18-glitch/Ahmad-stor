@@ -1,0 +1,7 @@
+project_id = "replace-with-your-supabase-project-ref"
+
+[functions.create-zarinpal-payment]
+verify_jwt = false
+
+[functions.verify-zarinpal-payment]
+verify_jwt = false
