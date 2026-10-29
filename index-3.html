@@ -123,6 +123,17 @@ body{background-image:radial-gradient(ellipse at 80% 0%,#241052 0,transparent 34
 #app .feature,#app .review{background:linear-gradient(155deg,#11182d,#090e1d)!important}
 </style>
 
+
+<style id="ahmad-lightning-effect">
+@keyframes ahmadLightningFlash{0%,7%,9%,48%,50%,100%{opacity:.72}8%,49%{opacity:1}51%{opacity:.42}53%{opacity:.88}54%{opacity:.62}}
+@keyframes ahmadLightningPulse{0%,100%{filter:drop-shadow(0 0 4px #4c8dff) drop-shadow(0 0 10px #682bff)}50%{filter:drop-shadow(0 0 8px #00c8ff) drop-shadow(0 0 20px #8a2bff)}}
+body{position:relative;isolation:isolate;background-color:#030611!important}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.88;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 900' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cfilter id='g'%3E%3CfeGaussianBlur stdDeviation='3' result='b'/%3E%3CfeMerge%3E%3CfeMergeNode in='b'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Cg fill='none' stroke-linecap='round' stroke-linejoin='round' filter='url(%23g)'%3E%3Cpath d='M-15 45 L45 92 24 125 86 162 62 203 119 244 91 281 145 326 112 361 171 402 137 448 192 489 163 535 218 577 187 622 241 665 207 710 263 751 231 799 288 842 270 920' stroke='%2300c8ff' stroke-width='2.5'/%3E%3Cpath d='M-15 45 L45 92 24 125 86 162 62 203 119 244 91 281 145 326 112 361 171 402 137 448 192 489 163 535 218 577 187 622 241 665 207 710 263 751 231 799 288 842' stroke='%238b35ff' stroke-width='1'/%3E%3Cpath d='M435 15 L375 63 395 101 342 142 365 181 309 224 334 268 280 310 305 351 252 395 278 440 224 483 250 527 197 571 224 614 170 658 195 703 142 748 164 792 111 838 130 900' stroke='%238b35ff' stroke-width='2.5'/%3E%3Cpath d='M435 15 L375 63 395 101 342 142 365 181 309 224 334 268 280 310 305 351 252 395 278 440 224 483 250 527 197 571 224 614 170 658 195 703 142 748 164 792 111 838 130 900' stroke='%2300c8ff' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E"),radial-gradient(ellipse at 0% 45%,#192cff26,transparent 42%),radial-gradient(ellipse at 100% 65%,#7c18ff25,transparent 40%);background-size: min(42vw,420px) 100%,100% 100%,100% 100%;background-repeat:repeat-y, no-repeat,no-repeat;background-position:left top,right top,left top;animation:ahmadLightningFlash 7s linear infinite}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#02061100 0%,#02061100 82%,#130b3520 100%);opacity:.8}
+#app,.topbar,.header{position:relative;z-index:1}
+@media(prefers-reduced-motion:reduce){body::before{animation:none}}
+</style>
+
 </head>
 <body>
 <div id="cosmicIntro" role="dialog" aria-label="ورود فضایی به احمد استور"><div class="cosmos"></div><div class="vortex"></div><div class="core"></div><div class="streaks" id="cosmicStreaks"></div><div class="intro-copy"><div class="intro-logo">A</div><h2>به احمد استور خوش آمدی</h2><p id="cosmicPhase">در حال اتصال به دروازه کهکشانی...</p><div class="warp-line"><span></span></div><div class="enter-label" id="cosmicStatus">INITIALIZING COSMIC GATE · 01/04</div></div><button class="skip-intro" id="skipCosmicIntro" type="button">رد کردن ✦</button></div>
