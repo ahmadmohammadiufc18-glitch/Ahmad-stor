@@ -225,6 +225,5 @@ const progress=document.getElementById('scrollProgress'),backTop=document.getEle
 </script><script>
 (()=>{const intro=document.getElementById('cosmicIntro');if(!intro)return;const layer=document.getElementById('cosmicStreaks');for(let i=0;i<100;i++){const el=document.createElement('i');el.className='streak';el.style.setProperty('--ang',(Math.random()*360)+'deg');el.style.setProperty('--len',(35+Math.random()*150)+'px');el.style.setProperty('--dur',(0.8+Math.random()*1.7)+'s');el.style.setProperty('--delay',(Math.random()*2.8)+'s');layer.appendChild(el)}let closed=false;const phase=document.getElementById('cosmicPhase'),status=document.getElementById('cosmicStatus');const phases=[['در حال اتصال به دروازه کهکشانی...','INITIALIZING COSMIC GATE · 01/04'],['در حال عبور از میدان ستاره‌ای...','STELLAR FIELD · 02/04'],['شارژ هسته انرژی...','ENERGY CORE · 03/04'],['آماده ورود به احمد استور','WARP COMPLETE · 04/04']];phases.forEach((v,i)=>setTimeout(()=>{if(!closed){phase.textContent=v[0];status.textContent=v[1]}},[0,2100,4300,6500][i]));function leave(){if(closed)return;closed=true;intro.classList.add('out');setTimeout(()=>intro.remove(),1000)}document.getElementById('skipCosmicIntro').addEventListener('click',leave);window.addEventListener('keydown',e=>{if(e.key==='Escape')leave()});setTimeout(leave,9000)})();
 </script>
-
-
+<!-- GitHub Pages rebuild trigger: 2026-10-29 -->
 </body></html>
