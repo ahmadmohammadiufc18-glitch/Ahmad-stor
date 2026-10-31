@@ -113,15 +113,7 @@ body{background:radial-gradient(ellipse at 85% -10%,#33266a55,transparent 35%),r
 
 </style>
 <style id="ahmad-force-dark-v3">
-:root{color-scheme:dark!important;--bg:#050713!important;--surface:#0b1020!important;--ink:#f4f5ff!important;--muted:#a0acd0!important;--line:#222b4b!important}
-html,body{background:#050713!important;background-color:#050713!important;color:#f4f5ff!important}
-body{background-image:radial-gradient(ellipse at 80% 0%,#241052 0,transparent 34%),radial-gradient(ellipse at 5% 30%,#071e42 0,transparent 32%)!important}
-#app,.wrap,main#app{background:transparent!important;background-color:transparent!important;color:#f4f5ff!important}
-#app .page,#app .feature,#app .review,#app .summary,#app .chip,#app .outline,#app .tag,#app .qty button{background-color:#0b1020!important;color:#f4f5ff!important;border-color:#28345c!important}
-#app .page{background:linear-gradient(155deg,#11182d,#090e1d)!important}
-#app .field input,#app .field textarea,#app .field select,#app .search input{background:#070c1b!important;color:#f5f6ff!important;border-color:#2a3559!important}
-#app .summary{background:#10172a!important}
-#app .feature,#app .review{background:linear-gradient(155deg,#11182d,#090e1d)!important}
+
 </style>
 
 
@@ -144,83 +136,12 @@ body::before{content:"";display:block;position:fixed!important;inset:0!important
 body>*{position:relative;z-index:1}
 @media(prefers-reduced-motion:reduce){body::before{animation:none!important}}
 
-/* Premium neon heading treatment */
-h1,h2,h3,.section-title,.page-title{
-  color:#f7f4ff;
-  font-weight:900;
-  letter-spacing:.1px;
-  text-shadow:0 0 10px rgba(147,96,255,.28),0 2px 14px rgba(0,0,0,.45);
-}
-h1,.page h1,.hero h1{
-  background:linear-gradient(100deg,#ffffff 0%,#d9c7ff 42%,#7ee7ff 100%);
-  -webkit-background-clip:text;
-  background-clip:text;
-  -webkit-text-fill-color:transparent;
-  filter:drop-shadow(0 0 9px rgba(137,89,255,.24));
-}
-h2,.section-title{
-  color:#d9c5ff;
-  text-shadow:0 0 12px rgba(151,91,255,.4);
-}
-h3{
-  color:#a9efff;
-  text-shadow:0 0 10px rgba(70,205,255,.25);
-}
-.page h1,.page h2,.section-title{
-  position:relative;
-}
-.page h1::after,.page h2::after,.section-title::after{
-  content:"";
-  display:block;
-  width:clamp(58px,12vw,104px);
-  height:3px;
-  margin-top:9px;
-  border-radius:99px;
-  background:linear-gradient(90deg,#a855f7,#36d9ff,transparent);
-  box-shadow:0 0 12px rgba(95,105,255,.7);
-}
-@media (prefers-reduced-motion:no-preference){
-  h1,h2,.section-title{
-    animation:neonHeadingIn .65s ease-out both;
-  }
-  @keyframes neonHeadingIn{
-    from{opacity:.65;transform:translateY(5px);filter:drop-shadow(0 0 0 transparent)}
-    to{opacity:1;transform:translateY(0);filter:drop-shadow(0 0 9px rgba(137,89,255,.24))}
-  }
-}
+
 
 </style>
 
 <style id="ahmad-visible-headings-v2">
-/* Force clear, high-contrast neon section headings */
-html body h1, html body .hero h1, html body .page h1, html body h2, html body .page h2,
-html body h3, html body .section-title, html body .page-title {
-  font-weight: 900 !important;
-  letter-spacing: .2px !important;
-  text-shadow: 0 0 3px #070612, 0 0 12px rgba(157,91,255,.78), 0 0 22px rgba(53,210,255,.3) !important;
-}
-html body h1, html body .hero h1, html body .page h1 {
-  color: #e7d9ff !important;
-  background: linear-gradient(100deg,#fff 0%,#d8b4fe 48%,#67e8f9 100%) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  filter: drop-shadow(0 0 8px rgba(168,85,247,.65)) !important;
-}
-html body h2, html body .page h2, html body .section-title {
-  color: #d8b4fe !important;
-  text-shadow: 0 0 8px rgba(168,85,247,.9), 0 0 18px rgba(56,189,248,.4) !important;
-}
-html body h3, html body .page h3 {
-  color: #7deaff !important;
-  text-shadow: 0 0 9px rgba(56,189,248,.65), 0 1px 3px #000 !important;
-}
-html body h1::after, html body h2::after, html body .section-title::after {
-  content: "" !important; display: block !important; width: 76px !important; height: 3px !important;
-  margin-top: 8px !important; border-radius: 20px !important;
-  background: linear-gradient(90deg,#c084fc,#22d3ee) !important;
-  box-shadow: 0 0 12px rgba(34,211,238,.8) !important;
-}
+
 </style>
 <style>
 /* Music center */
