@@ -470,8 +470,30 @@ const progress=document.getElementById('scrollProgress'),backTop=document.getEle
 </script>
 <!-- GitHub Pages rebuild trigger: 2026-10-29 -->
 <style id="ahmad-navigation-overlay-fix">
-/* The cosmic intro is decorative; it must never intercept navigation taps. */
-#cosmicIntro{pointer-events:none!important}
-#cosmicIntro .skip-intro{pointer-events:auto!important}
+/* Keep the cosmic intro visual only; never let it intercept site navigation. */
+#cosmicIntro,#cosmicIntro *{pointer-events:none!important}
+#cosmicIntro #skipCosmicIntro{pointer-events:auto!important}
+.header,.header .headin,.header .nav,.header .nav a{position:relative;z-index:10001;pointer-events:auto!important}
 </style>
+<script id="ahmad-navigation-click-fix">
+(()=> {
+  const known=new Set(['home','shop','cart','checkout','login','register','account','orders','about','faq','contact','crypto','rates','weborder','collaboration','feedback']);
+  document.addEventListener('click',e=>{
+    const a=e.target.closest && e.target.closest('a[href^="#"]');
+    if(!a)return;
+    const route=a.getAttribute('href').slice(1);
+    if(!known.has(route))return;
+    const intro=document.getElementById('cosmicIntro');
+    if(intro)intro.remove();
+    if(location.hash==='#'+route){
+      e.preventDefault();
+      if(typeof window.AStore!=='undefined' && typeof window.AStore.render==='function')window.AStore.render();
+      else window.dispatchEvent(new HashChangeEvent('hashchange'));
+    }else{
+      e.preventDefault();
+      location.hash=route;
+    }
+  },true);
+})();
+</script>
 </body></html>
