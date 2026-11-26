@@ -498,12 +498,16 @@ const progress=document.getElementById('scrollProgress'),backTop=document.getEle
     if(!a)return;
     const route=a.getAttribute('href').slice(1);
     if(!known.has(route))return;
-    e.preventDefault();
     const intro=document.getElementById('cosmicIntro');
     if(intro)intro.remove();
-    if(location.hash!=='#'+route) history.pushState(null,'','#'+route);
-    if(window.AStore && typeof window.AStore.render==='function') window.AStore.render();
-    else location.reload();
+    if(location.hash==='#'+route){
+      e.preventDefault();
+      if(window.AStore && typeof window.AStore.render==='function') window.AStore.render();
+      else location.reload();
+      return;
+    }
+    // Let the browser perform its native hash navigation; the site's
+    // hashchange listener is responsible for rendering the selected page.
   },true);
 })();
 </script>
